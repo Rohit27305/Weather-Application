@@ -1,66 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/svg">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Weather App</title>
-</head>
+    <title>Online Weather Application</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="title">Check City Weather</h1>
+      <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false">
+        <button><img src="images/search.png"></button>
+      </div>
+      <div class="error">
+        <p>Invalid city name</p>
+      </div>
+      <div class="weather">
+        <img src="images/rain.png" alt="weather icon" class="weather-icon">
+        <h1 class="temp">20°C</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+          <div class="col">
+            <img src="images/humidity.png" alt="humidity icon">
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/wind.png" alt="wind icon">
+            <div>
+              <p class="wind">15 KM/H</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
 
-<body>
-    <main>
-        <section>
-            <form id="city-form">
-                <div class="search">
-                    <input type="text" id="search-input" placeholder="enter city name">
-                </div>
-                <button id="search-btn" class="search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
-            <div class="loading" hidden>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="error" hidden>
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <span>Unknown City</span>
-            </div>
-            <div class="weather" hidden>
-                <div class="heading">
-                    <div class="heading-content">
-                        <h2 id="behavior"></h2>
-                        <h1 class="temp"><span id="temp"></span><span>°C</span></h1>
-                    </div>
-                </div>
-                <div class="information">
-                    <div class="humidity info">
-                        <div class="flex">
-                            <i class="fa-solid fa-water"></i>
-                            <h2><span id="humidity"></span>%</h2>
-                        </div>
-                        <p>Humidity</p>
-                    </div>
-                    <div class="wind-speed info">
-                        <div class="flex">
-                            <i class="fa-solid fa-wind"></i>
-                            <h1><span id="wind-speed"></span> km/h</h1>
-                        </div>
-                        <p>Wind Speed</p>
-                    </div>
-                </div>
-                <h3 id="city"></h3>
-            </div>
-        </section>
-    </main>
-    <script src="./main.js" type="module"></script>
-</body>
-
+      </div>
+    </div>
+    <script src="./main.js">
+    </script>
+  </body>
 </html>
